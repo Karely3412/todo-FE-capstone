@@ -1,0 +1,39 @@
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .input-wrapper {
+    height: 86px;
+    width: 800px;
+    border: 1px solid rgb(219, 212, 212);
+  }
+
+  .mid-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: space-evenly;
+
+    .view-checklist-wrapper {
+      height: 600px;
+      width: 400px;
+      border: 1px solid rgb(219, 212, 212);
+
+      .indiv-checklist-wrapper {
+        border: 1px solid rgb(219, 212, 212);
+      }
+    }
+
+    .checklist-items-wrapper {
+      height: 600px;
+      width: 400px;
+      border: 1px solid rgb(219, 212, 212);
+
+      .indiv-checklist-wrapper {
+        border: 1px solid rgb(219, 212, 212);
+      }
+    }
+  }
+}
