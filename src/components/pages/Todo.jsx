@@ -6,7 +6,6 @@ const Todo = () => {
   const [allCheckList, setAllCheckList] = useState([]);
 
   const addCheckList = () => {
-    // inputCheckListName.append(setAllCheckList);
     setAllCheckList((prev) => [...prev, inputCheckListName]);
   };
 
