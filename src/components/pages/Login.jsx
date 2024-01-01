@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import Cookies from "js-cookie";
+import { useHistory } from "react-router-dom";
 
 import LoginImage from "../../assets/images/login-image.jpg";
 
 const Login = () => {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,7 +20,10 @@ const Login = () => {
       body: JSON.stringify({ email: email, password: password }),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        Cookies.set("auth", data.auth_token.auth_token);
+        history.push("/todo");
+      });
   };
 
   return (
