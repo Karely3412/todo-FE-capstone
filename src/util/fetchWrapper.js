@@ -28,8 +28,8 @@ const fetchWrapper = (
       ...(body && { body: JSON.stringify(body) }),
     })
       .then((res) => res.json())
-      .catch(reject)
-      .then(resolve);
+      .then(resolve)
+      .catch(reject);
   });
 };
 
