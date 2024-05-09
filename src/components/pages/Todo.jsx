@@ -45,36 +45,31 @@ const Todo = () => {
               </div>
             );
           })}
-
-          <div className="completed-check-lists"></div>
         </div>
 
         <div className="checklist-items-wrapper">
-          <div className="checklist-wrapper">
+          <div className="checklist-title-wrapper">
             <h3>{openViewCheckList}</h3>
           </div>
-
           <input
             placeholder="Enter an Item"
             onChange={(e) => setInputAddItem(e.target.value)}
             value={inputAddItem}
           ></input>
-
-          <button onClick={addItemOn}>Add Item</button>
           {/* <button>Edit</button>You are awesome, have a great night! :)Thank you Hayden!!! You are amazing!!!  <3*/}
+          <button onClick={addItemOn}>Add Item</button>
 
-          {/* {mapping is next} */}
-          <div className="item-wrapper">
-            <ul>
-              <li>
-                <p>{addItem}</p>
-              </li>
-              <li>
-                <p>sample item</p>
-              </li>
-            </ul>
-          </div>
-
+          {addItem.map((data, key) => {
+            return (
+              <div key={key} className="item-wrapper">
+                <ul>
+                  <li>
+                    <p>{data}</p>
+                  </li>
+                </ul>
+              </div>
+            );
+          })}
           <button>Delete</button>
         </div>
       </div>
