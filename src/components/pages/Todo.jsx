@@ -18,17 +18,23 @@ const Todo = () => {
   return (
     <div className="todo-container">
       <h1>Start Planning Your Day</h1>
-      <div className="input-wrapper">
+      <div className="top-wrapper">
         <input
+          className="top-input"
           placeholder="Create a New Checklist?"
           onChange={(e) => setInputCheckListName(e.target.value)}
           value={inputCheckListName}
         ></input>
-        <button onClick={addCheckList}>Create</button>
+        <button className="top-button" onClick={addCheckList}>
+          Create
+        </button>
+        {/* <div className="input-wrapper">
+        </div> */}
       </div>
 
       <div className="mid-wrapper">
         <div className="view-checklist-wrapper">
+          <h1>Todo Lists</h1>
           {viewCheckList.map((data, key) => {
             return (
               <div key={key} className="checklist-wrapper">
@@ -49,6 +55,7 @@ const Todo = () => {
 
         <div className="checklist-items-wrapper">
           <div className="checklist-title-wrapper">
+            <h1>Todo List Items</h1>
             <h3>{openViewCheckList}</h3>
           </div>
           <input
@@ -63,9 +70,10 @@ const Todo = () => {
             return (
               <div key={key} className="item-wrapper">
                 <ul>
-                  <li>
+                  <input type="checkbox" />
+                  <button>
                     <p>{data}</p>
-                  </li>
+                  </button>
                 </ul>
               </div>
             );

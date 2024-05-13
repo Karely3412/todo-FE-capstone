@@ -3,11 +3,44 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: black;
 
-  .input-wrapper {
-    height: 86px;
+  h1 {
+    height: 120px;
     width: 800px;
-    border: 1px solid rgb(219, 212, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top-wrapper {
+    height: 86px;
+    width: 408px;
+    // border: 1px solid rgb(219, 212, 212);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+
+    .top-input {
+      height: 40px;
+      width: 280px;
+      border: #a6a2a2;
+      background-color: #fcca505c;
+      border-radius: 1px solid lightgrey;
+      border-radius: 3px;
+      padding: 0 0 0 15px;
+    }
+
+    .top-button {
+      height: 40px;
+      width: 80px;
+      border: 1px solid;
+      border-radius: 3px;
+      color: #fcca505c;
+      background-color: transparent;
+      // border-line: none;
+    }
   }
 
   .mid-wrapper {
@@ -21,7 +54,7 @@
       width: 400px;
       border: 1px solid rgb(219, 212, 212);
 
-      .indiv-checklist-wrapper {
+      .div-checklist-wrapper {
         border: 1px solid rgb(219, 212, 212);
       }
     }
@@ -31,7 +64,7 @@
       width: 400px;
       border: 1px solid rgb(219, 212, 212);
 
-      .indiv-checklist-wrapper {
+      .div-checklist-wrapper {
         border: 1px solid rgb(219, 212, 212);
       }
     }
